@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So nguyen to</title>
+</head>
+<body>
+<script>
+    let count=0;
+    let soluong = parseInt(prompt('Nhap so luong so nguyen to can in'));
+    let giatri1 = parseInt(prompt('Nhap gia tri bat dau'));
+    let giatri2= Math.sqrt(giatri1);
+    while (count <soluong){
+        if(giatri1 < 2){
+            break;
+        }else if (giatri1==2 || giatri1==3){
+                document.write(giatri1 + '</br>');
+                count=count +1;
+        }else {
+                let i=2;
+                let nt=true;
+                while ( i <= giatri2) {
+                    if (giatri1 % i==0){
+                        nt=false;
+                        break;
+                    }
+                    i++;
+
+                }
+                if (nt==true){
+                document.write(giatri1 + '</br>' );
+                count=count +1;
+                }
+        }
+
+        giatri1++;
+        giatri2= Math.sqrt(giatri1);
+    }
+</script>
+</body>
+</html>

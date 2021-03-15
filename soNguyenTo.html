@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+    <script>
+        function ktra(ele1) {
+            if (ele1 <2){
+                return false;
+            }else if(ele1 ==2 || ele1==3) {
+                return true;
+            }else {
+                let gioihan = Math.sqrt(ele1);
+                let nto =true;
+                for (let i=2 ; i <= gioihan; i++){
+                    if (ele1 % i ==0){
+
+                        nto= false;
+                    }
+                }
+
+                if (nto==true){
+                    return true;
+                }else {
+                    return false;
+                }
+
+            }
+        }
+
+        let k=11;
+        if (ktra(k)==true){
+            console.log (k);
+        }
+
+
+    </script>
+</body>
+</html>
